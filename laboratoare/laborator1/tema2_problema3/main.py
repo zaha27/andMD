@@ -12,5 +12,18 @@ def main() :
     print('Produsul elementelor este:')
     print(f.b(v, n))
 
+    print('Suma elementelor este:')
+    print(f.c(v, n))
+
+    print('Produsul elementelor negative este:')
+    print(f.d(v, n))
+
+    print('Maximul elementelor este:')
+    print(f.e(v, n))
+
+    print('Minimul elementelor este:')
+    print(f.f(v, n))
+    
+
 if __name__ == '__main__' :
     main()

@@ -15,5 +15,37 @@ def a(v: list, n: int) -> int:
     
 def b(v: list, n: int) -> int:
     if n == 0: 
-        return 1  
-    return v[n - 1] * b(v, n - 1)  
+        return 1
+    r = v[n - 1] * b(v, n - 1)  
+    return r
+
+def c(v: list, n: int) -> int:
+    if n == 0: 
+        return 1
+    r = v[n - 1] + b(v, n - 1)  
+    return r
+
+def d(v: list, n: int) -> int:
+    if n == 0: 
+        return 1
+    elif v[n - 1] < 0 :
+        r = v[n - 1] * d(v, n - 1)  
+    else :
+        r = d(v, n - 1)  
+    return r
+
+#maxim
+def e(v: list, n: int) -> int:
+    if n == 0: 
+        return r
+    else :
+        r = max(r, v[n - 1])  
+        e(v, n - 1)
+    return r
+
+#minim
+def f(v: list, n: int) -> int:
+    if n == 0: 
+        return 1
+    r = v[n - 1] * b(v, n - 1)  
+    return r
