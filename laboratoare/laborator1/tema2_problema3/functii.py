@@ -13,3 +13,7 @@ def a(v: list, n: int) -> int:
         r = a(v, n - 1)
     return r
     
+def b(v: list, n: int) -> int:
+    if n == 0: 
+        return 1  
+    return v[n - 1] * b(v, n - 1)  
