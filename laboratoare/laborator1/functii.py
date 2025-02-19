@@ -33,10 +33,9 @@ def fibo(n:int) -> int:
     return r
 
 def aranjamente(n:int, k:int) -> int:
-    if n == k:
+    if k == 0 :
         r = 1
-    elif k > n: 
-        r = False 
-    else : 
-        r = factorial(n) / factorial(n-k)
+    else :
+        r = n * aranjamente(n-1, k-1) 
     return r
+
