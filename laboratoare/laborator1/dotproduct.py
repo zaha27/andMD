@@ -3,13 +3,14 @@ import vector as V
 
 def main():
     n = 5
-    v1 = []  # Inițializare corectă
+    v1 = []
     v2 = []
 
     V.citireLista1(v1, n)
-    V.citireLista2(v2, n)  
+    V.citireLista1(v2, n)  
 
-    print(f"Produsul scalar este: {f.dotproduct(n, v1, v2)}")
+    print("Produsul scalar este: ")
+    print(f.dotproduct(n, v1, v2))
 
 if __name__ == '__main__': 
     main()
