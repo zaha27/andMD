@@ -36,16 +36,17 @@ def d(v: list, n: int) -> int:
 
 #maxim
 def e(v: list, n: int) -> int:
-    if n == 0: 
-        return r
-    else :
-        r = max(r, v[n - 1])  
-        e(v, n - 1)
-    return r
+    if n == 1: 
+        return v[0]
+    
+    max_rest = e(v, n - 1)
+    
+    return max(v[n - 1], max_rest)
 
-#minim
 def f(v: list, n: int) -> int:
-    if n == 0: 
-        return 1
-    r = v[n - 1] * b(v, n - 1)  
-    return r
+    if n == 1: 
+        return v[0]
+    
+    min_rest = f(v, n - 1)
+   
+    return min(v[n - 1], min_rest)
