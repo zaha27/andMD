@@ -42,9 +42,8 @@ def aranjamente(n:int, k:int) -> int:
     return r
 
 #tema 2 problema 2
-def dotproduct(n:int, v1:list, v2:list) -> int:
-    if n == 1 : 
-        r = v1[n] * v2[n]
-    else : 
-       r = r + dotproduct(n - 1, v1, v2)
+def dotproduct(n: int, v1: list, v2: list) -> int:
+    if n == 1: 
+        return v1[0] * v2[0]  
+    return v1[n-1] * v2[n-1] + dotproduct(n - 1, v1, v2)
 
