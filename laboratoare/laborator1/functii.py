@@ -1,3 +1,5 @@
+import vector as V
+
 def cmmdc(a:int, b:int) -> int:
     while b:
         a, b = b, a%b
@@ -34,8 +36,15 @@ def fibo(n:int) -> int:
 
 def aranjamente(n:int, k:int) -> int:
     if k == 0 :
-        r = 1
+        r = n
     else :
-        r = n * aranjamente(n-1, k-1) 
+        r = (n - k) * aranjamente(n, k-1) 
     return r
+
+#tema 2 problema 2
+def dotproduct(n:int, v1:list, v2:list) -> int:
+    if n == 1 : 
+        r = v1[n] * v2[n]
+    else : 
+       r = r + dotproduct(n - 1, v1, v2)
 
