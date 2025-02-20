@@ -70,3 +70,12 @@ def nrcifre(n: int) -> int:
         #sau 
         #r = 1 + nrcifre(n // 10)
     return r
+
+def produs_cifre(n: int) -> int:
+    if n == 0 :
+        return 1
+    else :
+        r = n%10 * nrcifre(int(n / 10))
+        #sau 
+        #r = n%10 + nrcifre(n // 10)
+    return r
