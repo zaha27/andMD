@@ -47,6 +47,13 @@ def dotproduct(n: int, v1: list, v2: list) -> int:
         return v1[0] * v2[0]  
     return v1[n-1] * v2[n-1] + dotproduct(n - 1, v1, v2)
 
+def cmmdc_rec(a: int, b: int) -> int :
+    if b == 0 :
+        return a
+    else :
+        r = cmmdc_rec(b, a % b)
+    return r
+
 def cmmdc_vector(n: int, v: list) -> int :
     if n == 0 :
         return v[0]
@@ -55,7 +62,7 @@ def cmmdc_vector(n: int, v: list) -> int :
         cmmdc_vector(n - 1, v)
     return v[0]
 
-def nrcifre(n: int) :
+def nrcifre(n: int) -> int:
     if n == 0 :
         return 0
     else :
