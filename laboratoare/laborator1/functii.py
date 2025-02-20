@@ -38,7 +38,7 @@ def aranjamente(n:int, k:int) -> int:
     if k == 0 :
         r = n
     else :
-        r = (n - k) * aranjamente(n, k-1) 
+        r = (n - k + 1) * aranjamente(n, k-1) 
     return r
 
 #tema 2 problema 2
@@ -47,3 +47,10 @@ def dotproduct(n: int, v1: list, v2: list) -> int:
         return v1[0] * v2[0]  
     return v1[n-1] * v2[n-1] + dotproduct(n - 1, v1, v2)
 
+def cmmdc_vector(n: int, v: list) -> int :
+    if n == 0 :
+        return v[0]
+    else :
+        v[0] = cmmdc(v[0], v[n])
+        cmmdc_vector(n - 1, v)
+    return v[0]
