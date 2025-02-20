@@ -54,3 +54,12 @@ def cmmdc_vector(n: int, v: list) -> int :
         v[0] = cmmdc(v[0], v[n])
         cmmdc_vector(n - 1, v)
     return v[0]
+
+def nrcifre(n: int) :
+    if n == 0 :
+        return 0
+    else :
+        r = 1 + nrcifre(int(n / 10))
+        #sau 
+        #r = 1 + nrcifre(n // 10)
+    return r
