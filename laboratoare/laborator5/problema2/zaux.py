@@ -1,2 +1,2 @@
 def spatiere() :
-    print("-" * 15)
+    print("-" * 110)

@@ -4,44 +4,28 @@ import zaux as s
 import univers as univers
 
 def main():
-    print("introdu universul logic:")
-    u = []
+    u1 = []
+    u2 = []
+    u3 = []
+    #print("introdu universul logic:")
     #u = univers.citireUnivers()
-    u = range(-2, 3, 1)
+    u1 = range(-10, 11, 1)
+    u2 = range(-100, 101, 1)
+    u3 = np.arange(-10, 11, 0.1)
+
     logic = False
     lista_valori = []
 
-    print("a) ∃yQ(5, y) ")
-    logic, lista_valori = f.a(u)
+    print("a. ∀x∃y(x^2 = y), x ∈ u1, y ∈ u2")
+    logic, lista_valori = f.a(u1, u2)
     print("v(a) = ", end = ""), print(logic)
     if logic :
         print("lista_valori = ", end = ""), print(lista_valori)
     s.spatiere()
 
-    print("b) ∃xQ(x,4) ")
-    logic, lista_valori = f.b(u)
-    print("v(b) = ", end = ""), print(logic)
-    if logic :
-        print("lista_valori = ", end = ""), print(lista_valori)
-    s.spatiere()
-
-    print("c) ∀x∃yQ(x, y) ")
-    logic, lista_valori = f.c(u)
-    print("v(c) = ", end = ""), print(logic)
-    if logic :
-        print("lista_valori = ", end = ""), print(lista_valori)
-    s.spatiere()
-
-    print("d) ∀y∃xQ(x, y)")
-    logic, lista_valori = f.d(u)
-    print("v(d) = ", end = ""), print(logic)
-    if logic :
-        print("lista_valori = ", end = ""), print(lista_valori)
-    s.spatiere()
-
-    print("e) ∃y∀xQ(x, y)")
-    logic, lista_valori = f.e(u)
-    print("v(e) = ", end = ""), print(logic)
+    print("b. ∀y∃x(x^2 = y), x ∈ u1, y ∈ u2")
+    logic, lista_valori = f.a(u1, u2)
+    print("v(a) = ", end = ""), print(logic)
     if logic :
         print("lista_valori = ", end = ""), print(lista_valori)
     s.spatiere()
