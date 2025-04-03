@@ -17,5 +17,7 @@ def main():
     print("Stergere elemente 1 2 3 din A", f.sterge_elemente(A, [1, 2, 3]))
     print("Produs cartezian:", f.produs_cartezian(A, B))
 
+
+
 if __name__ == "__main__":
     main()
