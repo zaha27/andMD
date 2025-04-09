@@ -10,8 +10,8 @@ def main ():
     B_one = list(map(funct.g, A_one_1, A_one_2, A_one_3))
     B_two = list(map(lambda x: 2*x, A_two))
 
-    print(B_one)
     print(B_two)
+    print(B_one)
 
 if __name__ == "__main__":
     main()
