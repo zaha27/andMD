@@ -10,7 +10,6 @@ def main():
     v = citire(n)
     
     p = list(map(lambda x, y : x * y, u, v))
-
     ps = reduce(lambda x, y: x + y, p)
 
     s = list(map(lambda x, y: x + y, u, v))

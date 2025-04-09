@@ -6,4 +6,5 @@ def citire(n) :
 
     return vector
 
-
+def max(a, b) :
+    return a if a > b else b
