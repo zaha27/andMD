@@ -1,4 +1,4 @@
-import laboratoare.laborator3.oplogic as f
+import oplogic as f
 
 def expresie1(p, q):
     return ((not(p) or q) and (p and not(q)))
