@@ -8,9 +8,9 @@ def implica(p, q):
     return not p or q
 
 def biconditie(p, q):
-    implicatie1 = implicatie(p, q);
-    implicatie2 = implicatie(q, p);
-    rezultat = implicatie1 and implicatie2;
+    implicatie1 = implicatie(p, q)
+    implicatie2 = implicatie(q, p)
+    rezultat = implicatie1 and implicatie2
     return rezultat
 
 def sau_exclusiv(p, q):

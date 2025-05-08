@@ -10,6 +10,3 @@ def citireMatrice(n) :
     for i in range(n) :
         A[i] = citireLista(n)
     return A
-
-def afisareMatrice(A) :
-    

@@ -21,20 +21,20 @@ def main():
     #V = fg.citesteListaNodurilor(n)
     #E = fg.citesteLaturile(V)
     n = 3
-    A = citireMatrice(n)
-    V = listaNoduri(n)
-    E = 
-    G = fg.creareGraf(V, E)
-    fg.desenareGraf(G)
-    M_R = nx.adjacency_matrix(G)
-    A_R = M_R.todense()
+    #A = citireMatrice(n)
+    #V = listaNoduri(n)
+    #E = 
+   # G = fg.creareGraf(V, E)
+   # fg.desenareGraf(G)
+   # M_R = nx.adjacency_matrix(G)
+   # A_R = M_R.todense()
 
     print()
-    print("Lista nodurilor: ", V)
-    print("Lista laturilor: ", E)
+   # print("Lista nodurilor: ", V)
+   # print("Lista laturilor: ", E)
     
     print("Matricea de adiacenta: ")
-    print(A_R)
+   # print(A_R)
 
     plt.show()
 
