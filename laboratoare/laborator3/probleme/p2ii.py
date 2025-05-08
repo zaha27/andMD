@@ -1,4 +1,4 @@
-import oplogic as f
+import laboratoare.laborator3.oplogic as f
 
 def main():
     print("%10s %10s %10s %10s %10s %10s %10s" % ('p', 'q', 'r', 'expr1', 'expr2', 'expr3', 'expr'))
