@@ -1,4 +1,4 @@
-import functii as f
+import laboratoare.laborator3.p6_p7.expresii6 as f
 
 def main():
     print("Punctul 1:")

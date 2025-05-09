@@ -21,22 +21,3 @@ def expresie4(p, q, r):
 def expresie5(p, q):
     first = p and f.implica(p, q)
     return f.implica(first, q)
-
-def e_tautologie_two(expresie):
-    for p in [True, False]:
-        for q in [True, False]:
-            if not expresie(p, q):
-                return False
-    return True
-
-def e_tautologie_three(expresie):
-    for p in [True, False]:
-        for q in [True, False]:
-            for r in [True, False]:
-                if not expresie(p, q, r):
-                    return False
-    return True
-     
-
-
-            
