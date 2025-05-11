@@ -20,6 +20,3 @@
 # 
 #daca vreau sa adaug un 2tuplu .append((x,y))
 #
-#
-#
-#
