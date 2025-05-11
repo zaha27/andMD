@@ -19,6 +19,12 @@ def c(U, nrLaturi) :
             return True
     return False     
 
+def d(U, nrLaturi) :
+    for i in range(5) :
+        if pd.S(U[i]) and nrLaturi[i] < 2 :
+            return False
+    return True
+
 
 
         
