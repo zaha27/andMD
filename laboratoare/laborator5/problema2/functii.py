@@ -1,4 +1,3 @@
-import numpy as np
 import predicat as p
 
 def a(u1, u2) :      #a. ∀x∃y(x^2 = y), x ∈ u1, y ∈ u2

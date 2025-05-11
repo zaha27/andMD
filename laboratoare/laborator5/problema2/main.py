@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np # type: ignore
 import functii as f
 import zaux as s
 import univers as univers
