@@ -1,5 +1,3 @@
-import propozitii as pz
-
 def a(M, T) :
     for i in range(4) :
         if M[0][i] :
