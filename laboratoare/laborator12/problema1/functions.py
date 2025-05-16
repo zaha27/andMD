@@ -49,7 +49,6 @@ def elementul_minim(graf):
     else :
         return 'nu exista'
 
-
 def afisare_graf(graf) :
     for nod in graf :
         lista_nod = graf[nod]
