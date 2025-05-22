@@ -1,31 +1,38 @@
 import numpy as np  #type: ignore
 
 
-def inmultire_lista(A, B, i, j, m) :
-    rezultat = 0
-
-    lista_unu = A[i]
-    lista_doi = []
-    for i in range(m) :
-        x = B[i][j]
-        lista_doi.append(x)
-    
-    for i in range(len(lista_unu)) :
-        x = x or (lista_unu and lista_doi)
-        if x == 1 : return 1
+def inmultire_lista(A, B, i, j, m):
+    for k in range(m):
+        if A[i][k] and B[k][j]:
+            return 1
     return 0
 
 def AxB(A, B, n, m, p) :
-    C = np.zeros((n, p))
-    for i in n :
-        for j in p :
+    C = np.zeros((n, p), dtype = int)
+    for i in range(n) :
+        for j in range(p) :
             C[i][j] = inmultire_lista(A, B, i, j, m)
+    return C
 
 def main() :
     n = 3
     m = 4
     p = 3
-    A = np.zeros((n, m))
-    B = np.zeros((m, p))
+    A = [
+        [0, 1, 0, 0],
+        [0, 0, 1, 1],
+        [1, 0, 0, 0]
+    ]
 
-    
+    B = [
+        [1, 1, 1],
+        [0, 1, 0],
+        [1, 0, 1],
+        [0, 1, 0]
+    ]
+
+    C = AxB(A, B, n, m, p)
+    print(C)
+
+if __name__ == "__main__" :
+    main()
