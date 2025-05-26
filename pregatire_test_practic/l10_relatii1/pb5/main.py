@@ -1,4 +1,7 @@
 import functions as f
+import networkx as nx
+import matplotlib.pyplot as plt
+
 
 def main() :
     n = int(input("n = "))
@@ -11,6 +14,17 @@ def main() :
     A_patrat = f.ridicare_la_patrat(n, A)
     f.afisare_matrice(n, A_patrat)
 
+    lista = f.lista_perechi(n, A)
+    print(lista)
+
+    V = list(range(1, n+1))
+    E = lista
+
+    G = f.creareGraf(V, E)
+    f.desenareGraf(G)
+    print(V)
+
+    plt.show()
     
 
 if __name__ == "__main__" :
