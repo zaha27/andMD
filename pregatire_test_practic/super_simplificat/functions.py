@@ -128,13 +128,16 @@ def citire_lista_perechi(n :int) -> set:
         print(f"perechea {i+1}")
         print(f"{' ':4}primul = ", end = ' ')
         a = input()
+        print(f"{' ':3}", end = ' ')
         b = input('al doilea = ')
         tuplu = (a,b)
-        setul.append(tuplu)
+        setul.add(tuplu)
     return setul
 
-def generare_matrice(setul: set, n : int) -> list :
-    M = np.zeros((n,n), dtype = int)
+def generare_matrice(setul: set) -> list :
+    M = np.zeros((4,4), dtype = int)
     for i,j in setul :
-        M[i-1][j-1] = 1
+        a = int(i) - 1
+        b = int(j) - 1
+        M[a][b] = 1
     return M
