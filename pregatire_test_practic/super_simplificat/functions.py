@@ -72,3 +72,17 @@ def pb3_cuantificatori() :
         if ok == 0 : 
             stare_a = False
     print(f"Stare d):{stare_d}")
+
+def pb2_argumentatie() :
+    
+    u = [False, True]
+    ok = 1
+    for a in u :
+        for b in u :
+            for c in u :
+                ip1 = implicatie(a, b and c)
+                ip2 = not b
+                expr = implicatie(ip1 and ip2, not a)
+                if not expr :
+                    ok = 0
+    print(bool(ok))
