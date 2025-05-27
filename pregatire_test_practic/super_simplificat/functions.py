@@ -136,6 +136,5 @@ def citire_lista_perechi(n :int) -> set:
 def generare_matrice(setul: set, n : int) -> list :
     M = np.zeros((n,n), dtype = int)
     for i,j in setul :
-        M[i][j] = 1
-    
+        M[i-1][j-1] = 1
     return M
