@@ -1,4 +1,6 @@
 import numpy as np # type: ignore
+import math as m
+
 
 def pb1_recursivitate(a : int, b : int) -> int :
     if b == 0 :
@@ -86,3 +88,54 @@ def pb2_argumentatie() :
                 if not expr :
                     ok = 0
     print(bool(ok))
+
+
+def citire_lista_cuvinte(n) :
+    LW = []
+    while True :
+        try :   
+            x = input(">")
+            LW.append(x)
+            n = n+1
+        except EOFError :
+            break
+    return LW
+
+from functools import reduce
+def problema2si3_lab5(x) :
+    x = (3.14159, -23.2381, -123.123, 24, -96, 36, 64, -23, -74, -121, 34)
+    f_pozitive = lambda x : x > 10
+    pozitive = []
+    pozitive = list(filter(f_pozitive, x))
+    print(f"pozitive:{pozitive}")
+    f_radacina = lambda x : m.sqrt(x)
+    x_radical = list(map(f_radacina,pozitive))
+    print(f"cu radical:{x_radical}")
+
+    f_suma = lambda x, y : x + y
+    f_ridicare_patrat = lambda x: x * x
+
+    x_suma = reduce(f_suma, x)
+    x_norma = m.sqrt(reduce(f_suma,list(map(f_ridicare_patrat, x))))
+
+    print(f"suma:{x_suma}")
+    print(f"norma:{x_norma}")
+
+
+def citire_lista_perechi(n :int) -> set:
+    setul = set()
+    for i in range(n) :
+        print(f"perechea {i+1}")
+        print(f"{' ':4}primul = ", end = ' ')
+        a = input()
+        b = input('al doilea = ')
+        tuplu = (a,b)
+        setul.append(tuplu)
+    return setul
+
+def generare_matrice(setul: set, n : int) -> list :
+    M = np.zeros((n,n), dtype = int)
+    for i,j in setul :
+        M[i][j] = 1
+    
+    return M
