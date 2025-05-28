@@ -89,7 +89,6 @@ def pb2_argumentatie() :
                     ok = 0
     print(bool(ok))
 
-
 def citire_lista_cuvinte(n) :
     LW = []
     while True :

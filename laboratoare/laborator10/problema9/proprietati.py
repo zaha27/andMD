@@ -1,5 +1,10 @@
 #from laborator3.oplogic import implicatie
 
+def implicatie1(p, q):
+    if p == True and q == False:
+        return False
+    return True
+
 def implicatie2(p, q):
     if p:
         return q

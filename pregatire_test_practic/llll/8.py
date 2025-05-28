@@ -1,7 +1,8 @@
 import functions as f
 import networkx as nx #type: ignore
 import matplotlib.pyplot as plt #type: ignore
-from desenareGraf import desenareGraf
+from pregatire_test_practic.lllll.desenareGraf import desenareGraf
+
 def creareGraf(E, V) :
     G = nx.DiGraph()
     G.add_edges_from(E)
@@ -27,6 +28,11 @@ def main() :
     M_r = nx.adjacency_matrix(G)
     A_r = M_r.todense()
     print(A_r)
+
+    test_matrix = f.generare_matrice(setul)
+    print(test_matrix)
+
+    print(test_matrix == A_r)
     return
 
 if __name__ == "__main__" :
